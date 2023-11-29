@@ -1,11 +1,25 @@
+#include "../solutions/max-two-product.cpp"
 #include "../solutions/sum-two.cpp"
 #include <iostream>
+#include <vector>
+
+using std::cin;
+using std::cout;
+using std::endl;
+using std::size_t;
+using std::vector;
 
 int main() {
-  int a, b;
-  std::cin >> a >> b;
+  int n;
+  cin >> n;
 
-  int sum = add_two(a, b);
+  vector<int> nums(n);
 
-  std::cout << sum << std::endl;
+  for (size_t i = 0; i < n; i++) {
+    cin >> nums[i];
+  }
+
+  int result = max_pairwise_product(nums);
+
+  cout << result << endl;
 }
