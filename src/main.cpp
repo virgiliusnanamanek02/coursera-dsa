@@ -15,11 +15,12 @@ int main() {
 
   vector<int> nums(n);
 
-  for (size_t i = 0; i < n; i++) {
+  for (size_t i = 0; i < n; ++i) {
     cin >> nums[i];
   }
 
-  int result = max_pairwise_product(nums);
+  long long result = max_pairwise_product(nums);
 
   cout << result << endl;
 }
+
